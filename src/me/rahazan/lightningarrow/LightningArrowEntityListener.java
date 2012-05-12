@@ -29,8 +29,13 @@ class LightningArrowEntityListener extends EntityListener {
 	    /* (non-Javadoc)
 	     * @see org.bukkit.event.entity.EntityListener#onProjectileHit(org.bukkit.event.entity.ProjectileHitEvent)
 	     */
-	    public void onProjectileHit(ProjectileHitEvent event) {
-    	if(event.getEntity() instanceof Arrow){
+	/**
+	 * 
+	 * 
+	 * @param event
+	 */
+	public void onProjectileHit(ProjectileHitEvent event) {
+	    if(event.getEntity() instanceof Arrow){
     		//The projectile is an arrow.
     	  	Location loc = event.getEntity().getLocation();
     	  	Arrow arrow = (Arrow) event.getEntity();
