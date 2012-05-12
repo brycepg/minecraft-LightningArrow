@@ -1,6 +1,5 @@
 package me.rahazan.lightningarrow;
 import java.util.logging.Logger;
-import org.bukkit.event.Event;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 /**
@@ -23,7 +22,8 @@ public class LightningArrow extends JavaPlugin {
 		getConfig().options().header("The node below sets the probability of \nlightning occuring on arrow hit."); //Adds header to the config.
 		saveConfig(); //Saves the config.
 		
-        getServer().getPluginManager().registerEvent(Event.Type.PROJECTILE_HIT, entityListener, Event.Priority.Normal, this);
+        //getServer().getPluginManager().registerEvent(Event.Type.PROJECTILE_HIT, entityListener, Event.Priority.Normal, this);
+        getServer().getPluginManager().registerEvents(entityListener, this);
         PluginDescriptionFile pdfFile = this.getDescription(); //Declaration of the pdfFile which represents the plugin.yml file
 		log.info("[" + pdfFile.getName() + "] (By Rahazan) - v" + pdfFile.getVersion() + " loaded."); //Plugin enabled message.
     }

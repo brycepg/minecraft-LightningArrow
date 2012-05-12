@@ -1,4 +1,8 @@
 name: LightningArrow
 main: me.rahazan.lightningarrow.LightningArrow
-version: 1.3
-author: Rahazan
+version: 1
+
+permissions:
+    LightningArrow.use:
+        description: Allows lightning to be spawned when an arrow hits
+        default: true
